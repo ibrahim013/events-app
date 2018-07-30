@@ -3,11 +3,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { EventAppComponent } from './event-app.component';
-import { EventListComponent } from './event/event-list.componet';
-import { EventListThumbnail } from './event/event-list-thumbnail.component';
+import { EventListComponent,
+        EventListThumbnail,
+        EventDetailsComponent,
+        EventService,
+        } from './event/index';
 import { NavBarComponent } from './navigation/navbar.component';
-import { EventDetailsComponent } from './event/event-details/event-details.component';
-import { EventService  } from './event/shared/event.service';
 import { ToastrService } from './common/toastr.service';
 import { Error404Component } from './errors/404.component';
 import { CreateNewEventComponent } from './event/create-event.component';
@@ -22,7 +23,7 @@ import { EventRouteActivator } from './event/shared/route-activation-service';
     NavBarComponent,
     EventDetailsComponent,
     Error404Component,
-    CreateNewEventComponent
+    CreateNewEventComponent,
   ],
   imports: [
     BrowserModule,
