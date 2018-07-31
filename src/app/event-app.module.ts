@@ -13,6 +13,7 @@ import { ToastrService } from './common/toastr.service';
 import { Error404Component } from './errors/404.component';
 import { CreateNewEventComponent } from './event/create-event.component';
 import { EventRouteActivator } from './event/shared/route-activation-service';
+import { AuthService } from './user/auth.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { EventRouteActivator } from './event/shared/route-activation-service';
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [EventService, ToastrService, EventRouteActivator],
+  providers: [EventService, ToastrService, EventRouteActivator, AuthService ],
   bootstrap: [EventAppComponent]
 })
 export class AppModule { }

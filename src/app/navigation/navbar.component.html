@@ -24,8 +24,9 @@
       <div class="navbar-header navbar-right">
         <ul class="nav navbar-nav">
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" [routerLink]="['user/profile']">
-              Welcome Ibrahim
+            <a href="" *ngIf= "!auth.isAuthenticated()" [routerLink]="['user/login']">Login</a>
+            <a href="" *ngIf= "auth.isAuthenticated()" class="dropdown-toggle" data-toggle="dropdown" [routerLink]="['user/profile']">
+              Welcome {{auth.currentUser.firstName}}
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu log-out">
